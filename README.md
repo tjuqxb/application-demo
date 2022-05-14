@@ -1,12 +1,13 @@
 ## A Simple SpringBoot Backend ##
 ### How to Run ####
-Set the right environment variables(database url, user name and password).  
+This project uses PostgreSQL.
+Set the right environment variables(DATABASE_URL, USER_NAME and PASSWORD).  
 ```mvn clean package && java -jar target/demo-0.0.1-SNAPSHOT.jar```
 
 
 ### Features ###
 Implement CRUD operations for items.  
-User can add comments when deleting itmes and cancel past deletions.  
+Users can add comments when deleting itmes and cancel past deletions.  
 The frontend would show undeleted items and deletion histories.   
 Adopt transactional process for delete/undelete items.
 
