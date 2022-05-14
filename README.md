@@ -7,8 +7,7 @@ Command line:
 
 
 ### Features ###
-Implement CRUD operations for items.  
-Users can add comments when deleting itmes and cancel past deletions.  
+**When deleting, allow deletion comments and undeletion.**   
 The frontend would show undeleted items and deletion histories.  
 Sever-side checks all the parameters using DTO layer.  
 Sever-side adopts transactional process for delete/undelete/edit items, as editting a deleted item is not allowed.   

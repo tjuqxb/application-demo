@@ -28,9 +28,9 @@ CREATE TABLE delete_records (
 );
 
 INSERT INTO delete_records (item_id, comment, is_cancelled, timestamp) VALUES
-(4, 'test', FALSE , 1652531995061),
-(5, 'test', FALSE , 1652531996061),
-(6, 'test', FALSE , 1652531997061);
+(4, 'test', FALSE , 1652535979730),
+(5, 'test', FALSE , 1652535996061),
+(6, 'test', FALSE , 1652535997061);
 
 
 
