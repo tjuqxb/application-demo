@@ -21,7 +21,7 @@ public class DeleteRecordController {
         return new ResponseEntity<>(recordService.getRecords(), HttpStatus.OK);
     }
 
-    @PostMapping(value = "/cancel/{recordId}")
+    @PutMapping(value = "/cancel/{recordId}")
     public ResponseEntity<?> cancelRecord(@PathVariable @Min(1) Integer recordId) {
         if (!recordService.cancelDeleteRecord(recordId)) {
             return new ResponseEntity<>("wrong record id",HttpStatus.BAD_REQUEST);
