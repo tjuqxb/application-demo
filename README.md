@@ -1,4 +1,4 @@
-## A Simple SpringBoot Backend ##
+## A Simple Spring Boot Backend ##
 ### How to Run ####
 This project uses PostgreSQL.
 Set the right environment variables(DATABASE_URL, USER_NAME and PASSWORD).  
