@@ -1,7 +1,6 @@
 ## A Simple Spring Boot Backend ##
 ### How to Run ####
-This project uses PostgreSQL.
-Set the right environment variables(DATABASE\_URL, USER\_NAME and PASSWORD).  
+This project uses PostgreSQL.  
 Command line:    
 ```mvn clean package && java -jar target/demo-0.0.1-SNAPSHOT.jar```
 
