@@ -44,8 +44,8 @@ public class ItemDAOImpl implements ItemDAO{
 
     @Override
     public void updateItem(Item item) {
-        String sql = "UPDATE items SET name = ?, quantity = ? WHERE item_id = ? AND is_deleted = FALSE";
-        jt.update(sql, item.getName(), item.getQuantity(), item.getItem_id());
+        String sql = "UPDATE items SET name = ?, quantity = ?, is_deleted = ? WHERE item_id = ?";
+        jt.update(sql, item.getName(), item.getQuantity(), item.getIs_deleted(), item.getItem_id());
     }
 
 }

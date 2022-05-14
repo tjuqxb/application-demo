@@ -52,8 +52,13 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    @Transactional(isolation = Isolation.READ_COMMITTED)
     public boolean updateItem(Item item) {
         try {
+            Item databaseItem = itemDAO.getItemById(item.getItem_id());
+            if (databaseItem.getIs_deleted()) {
+                return false;
+            }
             itemDAO.updateItem(item);
         } catch (Exception e) {
             return false;
