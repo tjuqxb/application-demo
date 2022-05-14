@@ -7,7 +7,7 @@ Command line:
 
 ### Features ###
 **When deleting, allow deletion comments and undeletion.**   
-**For one item, only the most recent deletion can be cancelled, but all deletion histories are displayed.**  
+**For one item, only the most recent deletion can be cancelled, but all deletion histories are stored in database.**  
 The frontend would show undeleted items and deletion histories.  
 Sever-side checks all the parameters using DTO layer.  
 Sever-side adopts transactional process for delete/undelete/edit items, as editting a deleted item is not allowed.   
@@ -34,8 +34,7 @@ CREATE TABLE delete_records (
     item_id INT NOT NULL,
     comment VARCHAR,
     is_cancelled BOOLEAN,
-    delete_date DATE NOT NULL,
-    delete_time TIME NOT NULL,
+    timestamp BIGINT NOT NULL,
     PRIMARY KEY (rec_id),
     FOREIGN KEY (item_id) REFERENCES items(item_id)
 );
