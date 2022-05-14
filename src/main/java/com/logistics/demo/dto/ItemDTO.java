@@ -12,6 +12,7 @@ public class ItemDTO {
     @NotNull
     String name;
 
+    @NotNull
     @Min(1)
     Integer quantity;
 

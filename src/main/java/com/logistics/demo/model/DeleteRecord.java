@@ -1,32 +1,37 @@
 package com.logistics.demo.model;
-import java.util.Date;
+import java.math.BigInteger;
 
 public class DeleteRecord {
     Integer rec_id;
     Integer item_id;
     String comment;
     Boolean is_cancelled;
-    Date delete_date;
-    Date delete_time;
+    Long timestamp;
+
+    public Long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public DeleteRecord() {
     }
 
-    public DeleteRecord(Integer item_id, String comment, Boolean is_cancelled, Date delete_date, Date delete_time) {
+    public DeleteRecord(Integer item_id, String comment, Boolean is_cancelled, Long timestamp) {
         this.item_id = item_id;
         this.comment = comment;
         this.is_cancelled = is_cancelled;
-        this.delete_date = delete_date;
-        this.delete_time = delete_time;
+        this.timestamp = timestamp;
     }
 
-    public DeleteRecord(Integer rec_id, Integer item_id, String comment, Boolean isCancelled, Date delete_date, Date delete_time) {
+    public DeleteRecord(Integer rec_id, Integer item_id, String comment, Boolean isCancelled, Long timestamp) {
         this.rec_id = rec_id;
         this.item_id = item_id;
         this.comment = comment;
         this.is_cancelled = isCancelled;
-        this.delete_date = delete_date;
-        this.delete_time = delete_time;
+        this.timestamp = timestamp;
     }
 
     public Integer getRec_id() {
@@ -45,13 +50,7 @@ public class DeleteRecord {
         return is_cancelled;
     }
 
-    public Date getDelete_date() {
-        return delete_date;
-    }
 
-    public Date getDelete_time() {
-        return delete_time;
-    }
 
     public void setRec_id(Integer rec_id) {
         this.rec_id = rec_id;
@@ -69,11 +68,5 @@ public class DeleteRecord {
         this.is_cancelled = isCancelled;
     }
 
-    public void setDelete_date(Date delete_date) {
-        this.delete_date = delete_date;
-    }
 
-    public void setDelete_time(Date delete_time) {
-        this.delete_time = delete_time;
-    }
 }

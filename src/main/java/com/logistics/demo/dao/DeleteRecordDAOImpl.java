@@ -22,8 +22,8 @@ public class DeleteRecordDAOImpl implements DeleteRecordDAO {
 
     @Override
     public void insertRecord(DeleteRecord record) {
-        String sql = "INSERT INTO delete_records (item_id, comment, is_cancelled, delete_date, delete_time) VALUES (?, ?, ?, ?, ?)";
-        jt.update(sql, record.getItem_id(), record.getComment(), record.getIs_cancelled(), record.getDelete_date(), record.getDelete_time());
+        String sql = "INSERT INTO delete_records (item_id, comment, is_cancelled, timestamp) VALUES (?, ?, ?, ?)";
+        jt.update(sql, record.getItem_id(), record.getComment(), record.getIs_cancelled(), record.getTimestamp());
     }
 
     @Override

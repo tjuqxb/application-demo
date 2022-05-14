@@ -22,16 +22,15 @@ CREATE TABLE delete_records (
     item_id INT NOT NULL,
     comment VARCHAR,
     is_cancelled BOOLEAN,
-    delete_date DATE NOT NULL,
-    delete_time TIME NOT NULL,
+    timestamp BIGINT NOT NULL,
     PRIMARY KEY (rec_id),
     FOREIGN KEY (item_id) REFERENCES items(item_id)
 );
 
-INSERT INTO delete_records (item_id, comment, is_cancelled, delete_date, delete_time) VALUES
-(4, 'test', FALSE , '2022-5-12','09:01:01'),
-(5, 'test', FALSE , '2022-5-12','09:01:02'),
-(6, 'test', FALSE , '2022-5-12','09:01:03');
+INSERT INTO delete_records (item_id, comment, is_cancelled, timestamp) VALUES
+(4, 'test', FALSE , 1652531995061),
+(5, 'test', FALSE , 1652531996061),
+(6, 'test', FALSE , 1652531997061);
 
 
 

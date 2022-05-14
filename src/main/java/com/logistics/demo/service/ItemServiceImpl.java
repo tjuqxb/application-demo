@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class ItemServiceImpl implements ItemService {
         }
         item.setIs_deleted(true);
         itemDAO.updateItem(item);
-        DeleteRecord deleteRecord = new DeleteRecord(itemId, comment, false, new Date(), new Date());
+        DeleteRecord deleteRecord = new DeleteRecord(itemId, comment, false, new Date().getTime());
         deleteRecordDAO.insertRecord(deleteRecord);
         return true;
     }
