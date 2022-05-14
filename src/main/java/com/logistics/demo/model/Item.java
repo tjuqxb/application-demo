@@ -9,6 +9,11 @@ public class Item {
     public Item() {
     }
 
+    public Item(String name, Integer quantity, Boolean is_deleted) {
+        this.name = name;
+        this.quantity = quantity;
+        this.is_deleted = is_deleted;
+    }
 
     public Item(Integer item_id, String name, Integer quantity, Boolean is_deleted) {
         this.item_id = item_id;

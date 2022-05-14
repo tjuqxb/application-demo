@@ -12,11 +12,19 @@ public class DeleteRecord {
     public DeleteRecord() {
     }
 
-    public DeleteRecord(Integer rec_id, Integer item_id, String comment, Boolean is_cancelled, Date delete_date, Date delete_time) {
-        this.rec_id = rec_id;
+    public DeleteRecord(Integer item_id, String comment, Boolean is_cancelled, Date delete_date, Date delete_time) {
         this.item_id = item_id;
         this.comment = comment;
         this.is_cancelled = is_cancelled;
+        this.delete_date = delete_date;
+        this.delete_time = delete_time;
+    }
+
+    public DeleteRecord(Integer rec_id, Integer item_id, String comment, Boolean isCancelled, Date delete_date, Date delete_time) {
+        this.rec_id = rec_id;
+        this.item_id = item_id;
+        this.comment = comment;
+        this.is_cancelled = isCancelled;
         this.delete_date = delete_date;
         this.delete_time = delete_time;
     }
@@ -57,8 +65,8 @@ public class DeleteRecord {
         this.comment = comment;
     }
 
-    public void setIsCancelled(Boolean is_cancelled) {
-        this.is_cancelled = is_cancelled;
+    public void setIs_cancelled(Boolean isCancelled) {
+        this.is_cancelled = isCancelled;
     }
 
     public void setDelete_date(Date delete_date) {

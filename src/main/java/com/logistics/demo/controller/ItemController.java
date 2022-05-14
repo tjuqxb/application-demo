@@ -26,7 +26,7 @@ public class ItemController {
     public ResponseEntity<?> addItem(@RequestBody @Validated ItemDTO data) {
         String name = data.getName();
         Integer quantity = data.getQuantity();
-        itemService.addItem(new Item(null, name, quantity, false));
+        itemService.addItem(new Item(name, quantity, false));
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 

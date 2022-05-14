@@ -40,7 +40,7 @@ public class ItemServiceImpl implements ItemService {
         }
         item.setIs_deleted(true);
         itemDAO.updateItem(item);
-        DeleteRecord deleteRecord = new DeleteRecord(null, itemId, comment, false, new Date(), new Date());
+        DeleteRecord deleteRecord = new DeleteRecord(itemId, comment, false, new Date(), new Date());
         deleteRecordDAO.insertRecord(deleteRecord);
         return true;
     }

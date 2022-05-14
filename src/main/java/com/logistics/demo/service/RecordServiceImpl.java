@@ -1,6 +1,7 @@
 package com.logistics.demo.service;
 
 import com.logistics.demo.dao.DeleteRecordDAO;
+import com.logistics.demo.dao.DeleteRecordDAOImpl;
 import com.logistics.demo.dao.ItemDAOImpl;
 import com.logistics.demo.model.DeleteRecord;
 import com.logistics.demo.model.Item;
