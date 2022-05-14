@@ -7,6 +7,7 @@ Command line:
 
 ### Features ###
 **When deleting, allow deletion comments and undeletion.**   
+**For one item, only the most recent deletion can be cancelled, but all deletion histories are displayed.**  
 The frontend would show undeleted items and deletion histories.  
 Sever-side checks all the parameters using DTO layer.  
 Sever-side adopts transactional process for delete/undelete/edit items, as editting a deleted item is not allowed.   
@@ -16,7 +17,7 @@ Sever-side adopts transactional process for delete/undelete/edit items, as editt
 Item and DeleteRecord are in "one to many" relationship.  
 In item use "is\_deleted" field to mark deleted.   
 In deleteRecord, use "is\_cancelled" field to mark cancelled.  
-For one item, although all deletion histories are recorded, only the most recent deletion can be cancelled.  
+
 Schemas:  
 ```
 CREATE TABLE items (  
