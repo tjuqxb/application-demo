@@ -7,12 +7,12 @@ Set the right environment variables(database url, user name and password).
 ### Features ###
 Implement CRUD operations for items.  
 User can add comments when deleting itmes and cancel past deletions.  
-The frontend would show undeleted items and deletion hitories.   
-For one item, only the most recent deletion can be cancelled, but the history would be kept.  
+The frontend would show undeleted items and deletion histories.   
 Adopt transactional process for delete/undelete items.
 
 
 ### Database Design ###
 Item and DeleteRecord are in "one to many" relationship.  
-Use an "is_deleted" field in item to mark deleted.   
-For one item, only the most recent deletion can be cancelled, use an "is_cancelled" field to mark cancelled.  
+In item use "is\_deleted" field to mark deleted.   
+In deleteRecord, use "is\_cancelled" field to mark cancelled.  
+For one item, only the most recent deletion can be cancelled, 
