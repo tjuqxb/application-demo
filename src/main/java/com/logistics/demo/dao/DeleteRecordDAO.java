@@ -5,7 +5,7 @@ import com.logistics.demo.model.DeleteRecord;
 import java.util.List;
 
 public interface DeleteRecordDAO {
-    public List<DeleteRecord> getAllRecords();
+    public List<DeleteRecord> getAllRecentRecords();
 
     public void insertRecord(DeleteRecord record);
 

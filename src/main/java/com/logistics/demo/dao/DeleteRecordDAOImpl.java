@@ -13,8 +13,8 @@ public class DeleteRecordDAOImpl implements DeleteRecordDAO {
     JdbcTemplate jt;
 
     @Override
-    public List<DeleteRecord> getAllRecords() {
-        String sql = "SELECT * FROM delete_records ORDER BY rec_id DESC ";
+    public List<DeleteRecord> getAllRecentRecords() {
+        String sql = "SELECT * FROM delete_records WHERE is_cancelled = FALSE ORDER BY rec_id DESC ";
         List<Map<String, Object>> ret0 = jt.queryForList(sql);
         List<DeleteRecord> ret = BeanMapUtils.mapsToBeans(ret0, DeleteRecord.class);
         return ret;

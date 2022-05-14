@@ -44,6 +44,6 @@ public class RecordServiceImpl implements RecordService {
 
     @Override
     public List<DeleteRecord> getRecords() {
-        return deleteRecordDAO.getAllRecords();
+        return deleteRecordDAO.getAllRecentRecords();
     }
 }
