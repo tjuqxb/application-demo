@@ -14,14 +14,14 @@ Sever-side adopts transactional process for delete/undelete/edit items, as editt
 
 ### API ###
 
-| Routes        | RESTful          | Desription | JSON body|
-| ---------- | :-----------:  | :-----------: |
- |**items/list**|GET|get a list of items|    
- |**items/add**|POST | add an item |{"name":"example", "quantity":123}|  
- |**items/edit**|PUT| edit an item|{"item_id":1,"name":"example","quantity":123}|   
-|**items/delete**|POST | mark an item as deleted and add a delete record|{"item_id":1, "comment":"deletion comment"}|
-|**records/list** |GET |get a list of delete records|  |
-|**records/cancel/:id**|PUT  |mark a delete record as cancelled|  |  
+| Routes        | RESTful     | Desription | JSON body|    
+| ---------- | :-----------:  | :-----------: |    
+|**items/list**|GET|get a list of items|  |      
+|**items/add**|POST| add an item |{"name":"example", "quantity":123}|    
+|**items/edit**|PUT| edit an item|{"item_id":1,"name":"example","quantity":123}|     
+|**items/delete**|POST | mark an item as deleted and add a delete record|{"item_id":1, "comment":"deletion comment"}|  
+|**records/list** |GET |get a list of delete records|  |  
+|**records/cancel/:id**|PUT  |mark a delete record as cancelled|  |    
   
 
 
