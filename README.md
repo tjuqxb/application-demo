@@ -27,7 +27,7 @@ Sever-side adopts transactional process for delete/undelete/edit items, as editt
 
 ### Database Design ###
 Item and DeleteRecord are in "one to many" relationship.  
-In item use "is\_deleted" field to mark deleted.   
+In item, use "is\_deleted" field to mark deleted.   
 In deleteRecord, use "is\_cancelled" field to mark cancelled.  
 
 Schemas:  
