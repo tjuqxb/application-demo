@@ -3,7 +3,8 @@
  Command line:    
 
 ```mvn clean package && java -jar target/demo-0.0.1-SNAPSHOT.jar``` 
- 
+
+Link: <a>https://replit.com/@tjuqxb/application-demo</a>   
 This project uses PostgreSQL. It can be compliled and run without additional setup as it contains some necessary credentials from ElephantSQL，which can be replaced manually. A more secure way is using envrionment varibles with addtional setup.
 ### Features ###
 **When deleting, allow deletion comments and undeletion.**   
