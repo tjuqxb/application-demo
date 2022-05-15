@@ -46,7 +46,7 @@ CREATE TABLE delete_records (
     rec_id SERIAL,
     item_id INT NOT NULL,
     comment VARCHAR,
-    is_cancelled BOOLEAN,
+    is_cancelled BOOLEAN NOT NULL,
     timestamp BIGINT NOT NULL,
     PRIMARY KEY (rec_id),
     FOREIGN KEY (item_id) REFERENCES items(item_id)
