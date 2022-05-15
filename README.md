@@ -12,6 +12,15 @@ The frontend would show undeleted items and deletion histories.
 Sever-side checks all the parameters using DTO layer.  
 Sever-side adopts transactional process for delete/undelete/edit items, as editting a deleted item is not allowed.   
 
+### API ###
+GET **items/list**:get a list of items  
+POST  **items/add**: add an item  
+PUT **items/edit**: edit an item  
+POST **items/delete**: mark an item as deleted, add a delete record  
+GET **records/list**: get a list of delete records  
+PUT **records/cancel/:recordId**: mark a delete record as cancelled
+  
+
 
 ### Database Design ###
 Item and DeleteRecord are in "one to many" relationship.  
