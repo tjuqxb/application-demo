@@ -4,7 +4,7 @@
 
 ```mvn clean package && java -jar target/demo-0.0.1-SNAPSHOT.jar``` 
  
-This project uses PostgreSQL. It can complile and run without additional setup as it contains some necessary credentials from ElephantSQL，which can be replaced manually. A more secure way is using envrionment varibles with addtional setup.
+This project uses PostgreSQL. It can be compliled and run without additional setup as it contains some necessary credentials from ElephantSQL，which can be replaced manually. A more secure way is using envrionment varibles with addtional setup.
 ### Features ###
 **When deleting, allow deletion comments and undeletion.**   
 **For one item, only the most recent deletion can be cancelled, but all deletion histories are stored in database.**  
