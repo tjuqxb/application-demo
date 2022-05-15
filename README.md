@@ -24,7 +24,7 @@ PUT **records/cancel/:recordId**: mark a delete record as cancelled
 
 ### Database Design ###
 Item and DeleteRecord are in "one to many" relationship.  
-In item use "is\_deleted" field to mark deleted.   
+In item, use "is\_deleted" field to mark deleted.   
 In deleteRecord, use "is\_cancelled" field to mark cancelled.  
 
 Schemas:  
